@@ -1,0 +1,375 @@
+/* =========================================
+   ESTILIZAÇÃO GERAL
+   ========================================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: rgb(249, 249, 249);
+    min-height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.flex{
+    display: flex;
+}
+
+/* =========================================
+   CABEÇALHO E MENU
+   ========================================= */
+header{
+    padding: 40px 0;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: rgb(245, 41, 167);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: palevioletred;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 25px;
+    vertical-align: middle;
+}
+
+/* =========================================
+   BOTÃO DE IDIOMA (ESTILO TOGGLE / SWITCH)
+   ========================================= */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+.idioma-texto {
+    font-size: 15px;
+    font-weight: 700;
+    color: #bbbbbb;
+    transition: 0.3s ease;
+}
+
+.idioma-texto.ativo {
+    color: rgb(245, 41, 167); 
+}
+
+.toggle-switch {
+    width: 50px;
+    height: 26px;
+    background-color: #dddddd;
+    border-radius: 20px;
+    position: relative;
+    display: block;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.toggle-switch:hover {
+    background-color: #cccccc;
+}
+
+.toggle-circle {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 4px; 
+    transition: left 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch.active-en {
+    background-color: rgb(245, 41, 167); 
+}
+
+.toggle-switch.active-en .toggle-circle {
+    left: 26px; 
+}
+
+/* =========================================
+   BOTÃO CONTATO (ATUALIZADO SEM BUTTON)
+   ========================================= */
+.contato-bia a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(245, 41, 167);
+    color: rgb(255, 255, 255);
+    border: 0px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+    text-align: center;
+    line-height: normal;
+}
+
+.contato-bia a:hover {
+    box-shadow: 0px 0px 8px rgb(245, 41, 167);
+    transform: scale(1.05);
+    color: rgb(255, 255, 255) !important;
+}
+
+/* =========================================
+   TOPO DO SITE (SOBRE MIM)
+   ========================================= */
+section.topo-do-site{
+    padding: 40px 0;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: rgb(245, 41, 167);
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: rgb(0, 0, 0);
+    margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{ top: 0; }
+    100%{ top: 20px; }
+}
+
+/* =========================================
+   SEÇÃO DE HABILIDADES (SKILLS)
+   ========================================= */
+.secao-habilidades {
+    padding: 20px 0 60px 0;
+}
+
+.grid-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hab-badge {
+    background-color: #ffffff;
+    color: #555555;
+    padding: 10px 20px;
+    border-radius: 30px; 
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(245, 41, 167, 0.2); 
+    transition: 0.3s;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+.hab-badge:hover {
+    background-color: rgb(245, 41, 167);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(245, 41, 167, 0.3);
+}
+
+/* =========================================
+   SEÇÃO LETTERBOXD (FAVORITOS)
+   ========================================= */
+.secao-letterboxd {
+    background-color: rgb(249, 249, 249);
+    padding: 60px 0;
+}
+
+.titulo-favoritos {
+    color: #555555;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.grid-favoritos {
+    display: flex;
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+.item-filme {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 170px; 
+}
+
+.poster {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.poster:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================================
+   ESTRELAS COM ANIMAÇÃO DE BRILHO
+   ========================================= */
+.estrelas-filme {
+    color: #ffb700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    animation: brilhar 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes brilhar {
+    0% {
+        text-shadow: 0 0 2px rgba(255, 183, 0, 0.2);
+        color: #ffb700;
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255, 183, 0, 0.9), 0 0 18px rgba(255, 183, 0, 0.6);
+        color: #ffd043; 
+        transform: scale(1.02); 
+    }
+}
+
+/* =========================================
+   IMAGENS DE PROJETOS (TRAJETÓRIA)
+   ========================================= */
+.grid-projetos-fotos {
+    display: flex;
+    flex-direction: row; 
+    gap: 30px;
+    margin-bottom: 60px;
+    align-items: flex-start;
+}
+
+.grid-projetos-fotos > div {
+    flex: 1; 
+}
+
+.img-projeto {
+    width: 100%; 
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   ANIMAÇÃO DE SCROLL (FADE-IN)
+   ========================================= */
+.escondido {
+    opacity: 0;
+    transform: translateY(40px); 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.mostrar {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+/* =========================================
+   RESPONSIVIDADE (CELULARES E TABLETS)
+   ========================================= */
+@media (max-width: 768px) {
+    .interface {
+        padding: 0 6%;
+    }
+
+    header > .interface {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    header nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    header nav ul li {
+        padding: 0; 
+    }
+
+    section.topo-do-site .flex {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .topo-do-site .img-topo-site img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .grid-projetos-fotos {
+        flex-direction: column; 
+    }
+    
+    .img-projeto {
+        max-width: 500px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .grid-favoritos {
+        justify-content: center;
+    }
+    
+    .item-filme {
+        max-width: 140px; 
+    }
+}
