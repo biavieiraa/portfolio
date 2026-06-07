@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <title>Beatriz Vieira</title>
+</head>
+<body>
+    <header>
+        <div class="interface">
+            
+            <div class="toggle-container">
+                <span class="idioma-texto ativo">PT</span>
+                <a href="index-en.html" class="toggle-switch">
+                    <span class="toggle-circle"></span>
+                </a>
+                <span class="idioma-texto">EN</span>
+            </div>
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="trajetoria.html">Trajetória</a></li>
+                    <li><a href="https://www.linkedin.com/in/bvot" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin" style="font-size: 26px;"></i></a></li>
+                    <li><a href="https://github.com/biavieiraa" target="_blank" title="GitHub"><i class="fa-brands fa-github" style="font-size: 26px;"></i></a></li>
+                </ul>
+            </nav>
+
+            <div class="contato-bia">
+                <a href="mailto:bvot@cesar.school" class="botao-contato">Contato</a>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="topo-do-site escondido">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>Bem vindo ao meu portfólio!<span></span></h1>
+                        <p style="font-size: 19px; line-height: 1.6; color: #333;">Meu nome é Beatriz Vieira e eu sou estudante de Ciência da computação na Cesar School, fascinada por tecnologia, inovação e aprendizado contínuo. Busco aprimorar minhas habilidades e construir uma carreira com impacto positivo através da tecnologia.</p>
+                    </div>
+
+                    <div class="img-topo-site">
+                        <img src="images/triz.jpg" alt="Foto de Beatriz Vieira" width="500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-habilidades escondido">
+            <div class="interface">
+                <h2 class="titulo-favoritos" style="color: rgb(245, 41, 167); font-size: 24px;">HABILIDADES</h2>
+                
+                <div class="grid-habilidades">
+                    <div class="hab-badge"><i class="fa-brands fa-python"></i> Python</div>
+                    <div class="hab-badge">C/C++</div>
+                    <div class="hab-badge">Arduino</div>
+                    <div class="hab-badge"><i class="fa-brands fa-js"></i> JavaScript</div>
+                    <div class="hab-badge"><i class="fa-brands fa-html5"></i> HTML5 & CSS3</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-letterboxd escondido">
+            <div class="interface">
+                <h2 class="titulo-favoritos">FAVORITOS</h2>
+                
+                <div class="grid-favoritos">
+                    <div class="item-filme">
+                        <div class="poster">
+                            <img src="images/lalaland.jpg" alt="La La Land">
+                        </div>
+                        <div class="estrelas-filme">★★★★★</div>
+                    </div>
+
+                    <div class="item-filme">
+                        <div class="poster">
+                            <img src="images/legallyblonde.jpg" alt="Legalmente Loira">
+                        </div>
+                        <div class="estrelas-filme">★★★★★</div>
+                    </div>
+
+                    <div class="item-filme">
+                        <div class="poster">
+                            <img src="images/twilight.jpg" alt="Crepúsculo: Lua Nova">
+                        </div>
+                        <div class="estrelas-filme">★★★★★</div>
+                    </div>
+
+                    <div class="item-filme">
+                        <div class="poster">
+                            <img src="images/littlewomen.jpg" alt="Little Women">
+                        </div>
+                        <div class="estrelas-filme">★★★★★</div>
+                    </div>
+
+                    <div class="item-filme">
+                        <div class="poster">
+                            <img src="images/filme5.jpg" alt="Filme 5">
+                        </div>
+                        <div class="estrelas-filme">★★★★★</div>
+                    </div>
+
+                    <div class="item-filme">
+                        <div class="poster">
+                            <img src="images/filme6.jpg" alt="Filme 6">
+                        </div>
+                        <div class="estrelas-filme">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('mostrar');
+                }
+            });
+        });
+        const elementosOcultos = document.querySelectorAll('.escondido');
+        elementosOcultos.forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
