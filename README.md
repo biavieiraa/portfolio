@@ -24,9 +24,3 @@ Fiz o site do zero usando as tecnologias básicas da web, focando em deixar o c�
 * **JavaScript:** Coloquei funções em JS para resolver a parte interativa do site, como o funcionamento do menu responsivo.
 
 ---
-
-## Como rodar o projeto na sua máquina:
-
-1. Baixe ou clone o repositório:
-   ```bash
-   git clone [https://github.com/biavieiraa/portfolio.git](https://github.com/biavieiraa/portfolio.git)
