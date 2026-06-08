@@ -1,6 +1,4 @@
-/* =========================================
-   ESTILIZAÇÃO GERAL
-   ========================================= */
+
 *{
     margin: 0;
     padding: 0;
@@ -23,9 +21,6 @@ body{
     display: flex;
 }
 
-/* =========================================
-   CABEÇALHO E MENU
-   ========================================= */
 header{
     padding: 40px 0;
 }
@@ -58,9 +53,6 @@ header nav ul li{
     vertical-align: middle;
 }
 
-/* =========================================
-   BOTÃO DE IDIOMA (ESTILO TOGGLE / SWITCH)
-   ========================================= */
 .toggle-container {
     display: flex;
     align-items: center;
@@ -114,9 +106,7 @@ header nav ul li{
     left: 26px; 
 }
 
-/* =========================================
-   BOTÃO CONTATO (ATUALIZADO SEM BUTTON)
-   ========================================= */
+
 .contato-bia a {
     display: inline-block;
     text-decoration: none;
@@ -139,9 +129,7 @@ header nav ul li{
     color: rgb(255, 255, 255) !important;
 }
 
-/* =========================================
-   TOPO DO SITE (SOBRE MIM)
-   ========================================= */
+
 section.topo-do-site{
     padding: 40px 0;
 }
@@ -173,9 +161,6 @@ section.topo-do-site .flex{
     100%{ top: 20px; }
 }
 
-/* =========================================
-   SEÇÃO DE HABILIDADES (SKILLS)
-   ========================================= */
 .secao-habilidades {
     padding: 20px 0 60px 0;
 }
@@ -209,9 +194,7 @@ section.topo-do-site .flex{
     box-shadow: 0 6px 15px rgba(245, 41, 167, 0.3);
 }
 
-/* =========================================
-   SEÇÃO LETTERBOXD (FAVORITOS)
-   ========================================= */
+
 .secao-letterboxd {
     background-color: rgb(249, 249, 249);
     padding: 60px 0;
@@ -262,9 +245,7 @@ section.topo-do-site .flex{
     object-fit: cover;
 }
 
-/* =========================================
-   ESTRELAS COM ANIMAÇÃO DE BRILHO
-   ========================================= */
+
 .estrelas-filme {
     color: #ffb700;
     font-size: 14px;
@@ -284,9 +265,6 @@ section.topo-do-site .flex{
     }
 }
 
-/* =========================================
-   IMAGENS DE PROJETOS (TRAJETÓRIA)
-   ========================================= */
 .grid-projetos-fotos {
     display: flex;
     flex-direction: row; 
@@ -305,9 +283,7 @@ section.topo-do-site .flex{
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* =========================================
-   ANIMAÇÃO DE SCROLL (FADE-IN)
-   ========================================= */
+
 .escondido {
     opacity: 0;
     transform: translateY(40px); 
@@ -319,9 +295,7 @@ section.topo-do-site .flex{
     transform: translateY(0); 
 }
 
-/* =========================================
-   RESPONSIVIDADE (CELULARES E TABLETS)
-   ========================================= */
+
 @media (max-width: 768px) {
     .interface {
         padding: 0 6%;
